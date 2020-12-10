@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Modal from '../Modal';
+// import photo from '../../assets/small/commercial/0.jpg'
 
 const PhotoList = ({ category }) => {
 
@@ -123,7 +124,7 @@ const PhotoList = ({ category }) => {
       <div className="flex-row">
         {currentPhotos.map((image, i) => (
           <img
-            src={require(`../../assets/small/${category}/${i}.jpg`)}
+            src={require(`../../assets/small/${category}/${i}.jpg`).default}
             alt={image.name}
             className="img-thumbnail mx-1"
             onClick={() => toggleModal(image, i)}
@@ -136,3 +137,5 @@ const PhotoList = ({ category }) => {
 };
 
 export default PhotoList;
+
+
